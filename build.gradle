@@ -1,8 +1,5 @@
 plugins {
-	id 'java'
-	id 'eclipse'
-	id 'idea'
-	id 'fabric-loom' version '0.2.0-SNAPSHOT'
+	id 'fabric-loom' version '0.2.1-SNAPSHOT'
 	id 'maven-publish'
 }
 
