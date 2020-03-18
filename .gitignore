@@ -17,8 +17,14 @@ gradle-app.setting
 # Eclipse Gradle plugin generated files
 # Eclipse Core
 .project
+<<<<<<< HEAD
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
 .idea/
 .DS_Store
+=======
+
+# fabric
+
+>>>>>>> 01ae0cd (Add Eclipse *.launch files to the gitignore (#37))
 run/
