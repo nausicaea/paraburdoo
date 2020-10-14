@@ -24,6 +24,10 @@ gradle-app.setting
 .DS_Store
 =======
 
+# macos
+
+*.DS_Store
+
 # fabric
 
 >>>>>>> 01ae0cd (Add Eclipse *.launch files to the gitignore (#37))
