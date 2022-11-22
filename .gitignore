@@ -32,3 +32,10 @@ gradle-app.setting
 
 >>>>>>> 01ae0cd (Add Eclipse *.launch files to the gitignore (#37))
 run/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
