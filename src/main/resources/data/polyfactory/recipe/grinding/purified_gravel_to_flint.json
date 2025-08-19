@@ -1,0 +1,22 @@
+{
+  "type": "polyfactory:grinding",
+  "input": "paraburdoo:purified_gravel",
+  "minimum_speed": 6.0,
+  "optimal_speed": 15.0,
+  "output": [
+    {
+      "item": {
+        "count": 1,
+        "id": "minecraft:sand"
+      }
+    },
+    {
+      "chance": 0.05,
+      "item": {
+        "count": 1,
+        "id": "polyfactory:crushed_raw_iron"
+      }
+    }
+  ],
+  "time": 4.0
+}

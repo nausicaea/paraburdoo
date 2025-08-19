@@ -11,23 +11,43 @@ base {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+    maven {
+        name = 'Kneelawk Maven'
+        url = 'https://kneelawk.com/maven/'
+    }
+    maven {
+        name = 'Nucleoid'
+        url = 'https://maven.nucleoid.xyz'
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Modrinth'
+                url = 'https://api.modrinth.com/maven'
+            }
+        }
+        filter {
+            includeGroup 'maven.modrinth'
+        }
+    }
 }
 
 loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"modid" {
+		"paraburdoo" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
+            sourceSet sourceSets.client
 		}
 	}
 
+}
+
+fabricApi {
+    configureDataGeneration {
+        client = true
+    }
 }
 
 dependencies {
@@ -38,7 +58,12 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	
+
+    // Polymer libraries
+    modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
+    modImplementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
+
+    modCompileOnly "maven.modrinth:polyfactory:${project.polyfactory_version}"
 }
 
 processResources {
