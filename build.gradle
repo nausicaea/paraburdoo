@@ -1,7 +1,12 @@
 plugins {
 	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
-    id 'org.barfuin.gradle.taskinfo' version '2.2.0'
+    //id 'org.barfuin.gradle.taskinfo' version '2.2.0'
+}
+
+def manualBuild = true
+if (System.env.CI != null) {
+    manualBuild = false
 }
 
 version = project.mod_version
@@ -61,10 +66,9 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Polymer libraries
-    modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
-    modImplementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
-
-    modImplementation "eu.pb4:polyfactory:${project.polyfactory_version}"
+    modImplementation "eu.pb4:polymer-core:${project.polymer_version}"
+    modImplementation "eu.pb4:polymer-resource-pack:${project.polymer_version}"
+    modImplementation include("eu.pb4:polyfactory:${project.polyfactory_version}")
     modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
 }
 
@@ -88,6 +92,10 @@ java {
 
 	sourceCompatibility = JavaVersion.VERSION_21
 	targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.getByPath(':runDatagen').configure {
+    dependsOn gradle.includedBuild('polyfactory').task(':runDatagen')
 }
 
 jar {
