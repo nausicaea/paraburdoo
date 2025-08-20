@@ -73,6 +73,8 @@ dependencies {
 	modImplementation 'eu.pb4:sgui:1.8.2+1.21.4'
 	modImplementation 'eu.pb4:factorytools:0.5.0+1.21.4'
 	modImplementation 'com.kneelawk.graphlib:graphlib-core-fabric:2.0.3+1.21'
+
+    modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
 }
 
 processResources {
