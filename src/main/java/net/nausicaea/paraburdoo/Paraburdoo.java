@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.nausicaea.paraburdoo.block.ModBlocks;
 import net.nausicaea.paraburdoo.fluid.ModFluids;
+import net.nausicaea.paraburdoo.fluid.ModPolyfactoryFluids;
 import net.nausicaea.paraburdoo.item.ModItemGroups;
 import net.nausicaea.paraburdoo.item.ModItems;
 import net.nausicaea.paraburdoo.tag.ModTags;
@@ -25,6 +26,7 @@ public class Paraburdoo implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
         ModFluids.registerAll();
+        ModPolyfactoryFluids.registerAll();
         ModItems.registerAll();
         ModBlocks.registerAll();
         ModItemGroups.registerAll();

@@ -60,10 +60,28 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Polymer libraries
-    modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
-    modImplementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
+    modImplementation "maven.modrinth:polyfactory:${project.polyfactory_version}"
+    modImplementation "eu.pb4:polymer-core:${project.polymer_version}"
+	modImplementation "eu.pb4:polymer-blocks:${project.polymer_version}"
+    modImplementation "eu.pb4:polymer-resource-pack:${project.polymer_version}"
+	modImplementation "eu.pb4:polymer-resource-pack-extras:${project.polymer_version}"
+	modImplementation "eu.pb4:polymer-autohost:${project.polymer_version}"
+	modImplementation "eu.pb4:polymer-virtual-entity:${project.polymer_version}"
+	modImplementation 'eu.pb4:map-canvas-api:0.5.0+1.21.3'
+	modImplementation 'eu.pb4:common-protection-api:1.0.0'
+	modImplementation 'eu.pb4:sidebar-api:0.5.1+1.21.1'
+	modImplementation 'eu.pb4:sgui:1.8.2+1.21.4'
+	modImplementation 'eu.pb4:factorytools:0.5.0+1.21.4'
+	modImplementation 'com.kneelawk.graphlib:graphlib-core-fabric:2.0.3+1.21'
 
-    modCompileOnly "maven.modrinth:polyfactory:${project.polyfactory_version}"
+    modCompileOnly modLocalRuntime("maven.modrinth:polydex:${project.polydex_version}")
+    modLocalRuntime "eu.pb4:sgui:1.8.1+1.21.4"
+	modLocalRuntime "eu.pb4:placeholder-api:2.5.1+1.21.3"
+	modLocalRuntime "eu.pb4:predicate-api:0.6.0+1.21.2"
+	modLocalRuntime "eu.pb4:player-data-api:0.7.0+1.21.3"
+	modLocalRuntime "eu.pb4:sidebar-api:0.5.0+1.21"
+	modLocalRuntime "xyz.nucleoid:server-translations-api:2.4.0+1.21.2-rc1"
+	modLocalRuntime "me.lucko:fabric-permissions-api:0.3.3"
 }
 
 processResources {
