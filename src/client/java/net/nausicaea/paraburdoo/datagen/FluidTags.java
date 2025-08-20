@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
+import net.nausicaea.paraburdoo.Paraburdoo;
 import net.nausicaea.paraburdoo.fluid.ModFluids;
 import net.nausicaea.paraburdoo.tag.ModTags;
 
@@ -17,10 +18,13 @@ public class FluidTags extends FabricTagProvider<Fluid> {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        Paraburdoo.LOGGER.debug("add data to fluid tag {}", net.minecraft.registry.tag.FluidTags.WATER);
         getOrCreateTagBuilder(net.minecraft.registry.tag.FluidTags.WATER)
                 .add(ModFluids.FLOWING_SLUDGE)
                 .add(ModFluids.SLUDGE)
                 .setReplace(false);
+
+        Paraburdoo.LOGGER.debug("add data to fluid tag {}", ModTags.SLUDGE);
         getOrCreateTagBuilder(ModTags.SLUDGE)
                 .add(ModFluids.FLOWING_SLUDGE)
                 .add(ModFluids.SLUDGE)
