@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version "${loom_version}"
 	id 'maven-publish'
+    id 'org.barfuin.gradle.taskinfo' version '2.2.0'
 }
 
 version = project.mod_version
@@ -63,7 +64,8 @@ dependencies {
     modImplementation include("eu.pb4:polymer-core:${project.polymer_version}")
     modImplementation include("eu.pb4:polymer-resource-pack:${project.polymer_version}")
 
-    modCompileOnly "maven.modrinth:polyfactory:${project.polyfactory_version}"
+    modImplementation "eu.pb4:polyfactory:${project.polyfactory_version}"
+    modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
 }
 
 processResources {

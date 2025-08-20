@@ -8,3 +8,17 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+plugins {
+    id 'me.champeau.includegit' version '0.3.0'
+}
+gitRepositories {
+    include('polyfactory') {
+        uri = 'https://github.com/nausicaea/polyfactory.git'
+        branch = 'bugfix/1.21.4'
+    }
+}
+// includeBuild('polyfactory') {
+//     dependencySubstitution {
+//         substitute module('eu.pb4:polyfactory') using project(':')
+//     }
+// }
