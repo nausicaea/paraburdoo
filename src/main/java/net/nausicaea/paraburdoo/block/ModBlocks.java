@@ -1,6 +1,8 @@
 package net.nausicaea.paraburdoo.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
+import net.minecraft.block.cauldron.CauldronBehavior;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -15,6 +17,8 @@ import net.nausicaea.paraburdoo.fluid.ModFluids;
 import net.nausicaea.paraburdoo.fluid.FluidFallbackBlock;
 
 import java.util.function.Function;
+
+import static net.nausicaea.paraburdoo.block.cauldron.ModCauldronBehaviors.SLUDGE_CAULDRON_BEHAVIOR;
 
 public abstract class ModBlocks {
     public static final Block PURIFIED_GRAVEL = registerWithItem(
@@ -35,12 +39,11 @@ public abstract class ModBlocks {
                     .liquid()
                     .sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)
     );
-    // TODO: implement the sludge cauldron
-    // public static final Block SLUDGE_CAULDRON = register(
-    //         "sludge_cauldron",
-    //         settings -> new LeveledCauldronBlock(Biome.Precipitation.RAIN, CauldronBehavior.WATER_CAULDRON_BEHAVIOR, settings),
-    //         AbstractBlock.Settings.copyShallow(Blocks.CAULDRON)
-    // );
+    public static final Block SLUDGE_CAULDRON = register(
+            "sludge_cauldron",
+            s -> CauldronFallbackBlock.create(s, net.minecraft.world.biome.Biome.Precipitation.NONE, SLUDGE_CAULDRON_BEHAVIOR, Blocks.WATER_CAULDRON),
+            AbstractBlock.Settings.copyShallow(Blocks.CAULDRON)
+    );
 
     private static Block registerWithItem(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings) {
         // Create a registry key for the block

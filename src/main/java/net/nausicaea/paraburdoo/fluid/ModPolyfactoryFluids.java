@@ -23,7 +23,7 @@ public abstract class ModPolyfactoryFluids {
     public static final FluidType<Unit> SLUDGE = register(
         "sludge",
         FluidType.of()
-            .density(100)
+            .density(300)
             .fluid(ModFluids.SLUDGE)
             .color(0x645544)
             .particle(new ItemStackParticleEffect(ParticleTypes.ITEM, Items.BROWN_STAINED_GLASS_PANE.getDefaultStack()))
@@ -38,10 +38,9 @@ public abstract class ModPolyfactoryFluids {
     public static void registerAll() {
         FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE.getDefaultState(), Blocks.AIR.getDefaultState(), SLUDGE.ofBucket());
 
-        // TODO: implement the sludge cauldron blockstate conversions
-        // FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 3), ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 2), SLUDGE.ofBottle());
-        // FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 2), ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 1), SLUDGE.ofBottle());
-        // FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 1), Blocks.CAULDRON.getDefaultState(), SLUDGE.ofBottle());
+        FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 3), ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 2), SLUDGE.ofBottle());
+        FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 2), ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 1), SLUDGE.ofBottle());
+        FluidBehaviours.addBlockStateConversions(ModBlocks.SLUDGE_CAULDRON.getDefaultState().with(LeveledCauldronBlock.LEVEL, 1), Blocks.CAULDRON.getDefaultState(), SLUDGE.ofBottle());
 
         FluidBehaviours.addItemToFluidLink(ModItems.SLUDGE_BUCKET, SLUDGE.defaultInstance());
     }
