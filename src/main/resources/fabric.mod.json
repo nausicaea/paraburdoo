@@ -19,7 +19,9 @@
           "net.nausicaea.paraburdoo.ParaburdooDatagen"
         ]
 	},
-	"mixins": [],
+	"mixins": [
+      "paraburdoo.mixins.json"
+    ],
 	"depends": {
 		"fabricloader": ">=0.17.2",
 		"minecraft": "~1.21.4",
