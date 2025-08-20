@@ -12,19 +12,19 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.nausicaea.paraburdoo.Paraburdoo;
 import net.nausicaea.paraburdoo.fluid.ModFluids;
-import net.nausicaea.paraburdoo.fluid.PolymerFluidBlock;
+import net.nausicaea.paraburdoo.fluid.FluidBlock;
 
 import java.util.function.Function;
 
 public abstract class ModBlocks {
     public static final Block PURIFIED_GRAVEL = registerWithItem(
             "purified_gravel",
-            PurifiedGravel::new,
+            TexturedBlock::new,
             AbstractBlock.Settings.copy(Blocks.GRAVEL)
     );
     public static final Block SLUDGE = register(
             "sludge",
-            settings -> new PolymerFluidBlock(ModFluids.SLUDGE, settings),
+            settings -> new FluidBlock(ModFluids.SLUDGE, settings),
             AbstractBlock.Settings.create()
                     .mapColor(MapColor.BROWN)
                     .replaceable()
