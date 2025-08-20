@@ -35,6 +35,12 @@ public abstract class ModBlocks {
                     .liquid()
                     .sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)
     );
+    // TODO: implement the sludge cauldron
+    // public static final Block SLUDGE_CAULDRON = register(
+    //         "sludge_cauldron",
+    //         settings -> new LeveledCauldronBlock(Biome.Precipitation.RAIN, CauldronBehavior.WATER_CAULDRON_BEHAVIOR, settings),
+    //         AbstractBlock.Settings.copyShallow(Blocks.CAULDRON)
+    // );
 
     private static Block registerWithItem(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings) {
         // Create a registry key for the block
