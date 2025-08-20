@@ -13,7 +13,7 @@ base {
 repositories {
     maven {
         name = 'Kneelawk Maven'
-        url = 'https://kneelawk.com/maven/'
+        url = 'https://maven.kneelawk.com/releases'
     }
     maven {
         name = 'Nucleoid'
@@ -63,16 +63,16 @@ dependencies {
     modImplementation "maven.modrinth:polyfactory:${project.polyfactory_version}"
     modImplementation "eu.pb4:polymer-core:${project.polymer_version}"
 	modImplementation "eu.pb4:polymer-blocks:${project.polymer_version}"
-    modImplementation "eu.pb4:polymer-resource-pack:${project.polymer_version}"
+	modImplementation "eu.pb4:polymer-resource-pack:${project.polymer_version}"
 	modImplementation "eu.pb4:polymer-resource-pack-extras:${project.polymer_version}"
 	modImplementation "eu.pb4:polymer-autohost:${project.polymer_version}"
 	modImplementation "eu.pb4:polymer-virtual-entity:${project.polymer_version}"
-	modImplementation 'eu.pb4:map-canvas-api:0.5.0+1.21.3'
-	modImplementation 'eu.pb4:common-protection-api:1.0.0'
-	modImplementation 'eu.pb4:sidebar-api:0.5.1+1.21.1'
-	modImplementation 'eu.pb4:sgui:1.8.2+1.21.4'
-	modImplementation 'eu.pb4:factorytools:0.5.0+1.21.4'
-	modImplementation 'com.kneelawk.graphlib:graphlib-core-fabric:2.0.3+1.21'
+	modImplementation include('eu.pb4:map-canvas-api:0.5.1+1.21.5')
+	modImplementation include('eu.pb4:common-protection-api:1.0.0')
+	modImplementation include('eu.pb4:sidebar-api:0.5.1+1.21.1')
+	modImplementation include('eu.pb4:sgui:1.10.0+1.21.6')
+	modImplementation include('eu.pb4:factorytools:0.7.0+1.21.6')
+	modImplementation include('com.kneelawk.graphlib:graphlib-core-fabric:2.0.3-beta.1+1.21.5')
 }
 
 processResources {

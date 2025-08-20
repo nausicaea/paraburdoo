@@ -10,18 +10,19 @@ import net.nausicaea.paraburdoo.tag.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
-public class FluidTags extends FabricTagProvider<Fluid> {
+public class FluidTags extends FabricTagProvider.FluidTagProvider {
     public FluidTags(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-        super(output, RegistryKeys.FLUID, registriesFuture);
+        super(output, registriesFuture);
     }
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(net.minecraft.registry.tag.FluidTags.WATER)
+
+        valueLookupBuilder(net.minecraft.registry.tag.FluidTags.WATER)
                 .add(ModFluids.FLOWING_SLUDGE)
                 .add(ModFluids.SLUDGE)
                 .setReplace(false);
-        getOrCreateTagBuilder(ModTags.SLUDGE)
+        valueLookupBuilder(ModTags.SLUDGE)
                 .add(ModFluids.FLOWING_SLUDGE)
                 .add(ModFluids.SLUDGE)
                 .setReplace(false);

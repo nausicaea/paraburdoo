@@ -46,7 +46,7 @@ public abstract class SludgeFluid extends FlowableFluid {
     public void randomDisplayTick(World world, BlockPos pos, FluidState state, Random random) {
         if (!state.isStill() && !(Boolean)state.get(FALLING)) {
             if (random.nextInt(64) == 0) {
-                world.playSound(
+                world.playSoundClient(
                         pos.getX() + 0.5,
                         pos.getY() + 0.5,
                         pos.getZ() + 0.5,
@@ -58,7 +58,7 @@ public abstract class SludgeFluid extends FlowableFluid {
                 );
             }
         } else if (random.nextInt(10) == 0) {
-            world.addParticle(
+            world.addParticleClient(
                     ParticleTypes.UNDERWATER, pos.getX() + random.nextDouble(), pos.getY() + random.nextDouble(), pos.getZ() + random.nextDouble(), 0.0, 0.0, 0.0
             );
         }
