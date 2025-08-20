@@ -74,7 +74,14 @@ dependencies {
 	modImplementation 'eu.pb4:factorytools:0.5.0+1.21.4'
 	modImplementation 'com.kneelawk.graphlib:graphlib-core-fabric:2.0.3+1.21'
 
-    modCompileOnly "maven.modrinth:polydex:${project.polydex_version}"
+    modCompileOnly modLocalRuntime("maven.modrinth:polydex:${project.polydex_version}")
+    modLocalRuntime "eu.pb4:sgui:1.8.1+1.21.4"
+	modLocalRuntime "eu.pb4:placeholder-api:2.5.1+1.21.3"
+	modLocalRuntime "eu.pb4:predicate-api:0.6.0+1.21.2"
+	modLocalRuntime "eu.pb4:player-data-api:0.7.0+1.21.3"
+	modLocalRuntime "eu.pb4:sidebar-api:0.5.0+1.21"
+	modLocalRuntime "xyz.nucleoid:server-translations-api:2.4.0+1.21.2-rc1"
+	modLocalRuntime "me.lucko:fabric-permissions-api:0.3.3"
 }
 
 processResources {
