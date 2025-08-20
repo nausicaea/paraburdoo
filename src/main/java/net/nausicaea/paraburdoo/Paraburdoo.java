@@ -22,16 +22,16 @@ public class Paraburdoo implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
         ModFluids.registerAll();
         ModPolyfactoryFluids.registerAll();
         ModItems.registerAll();
         ModBlocks.registerAll();
         ModItemGroups.registerAll();
         ModTags.registerAll();
-        PolymerResourcePackUtils.addModAssets(MOD_ID);
+
+        if (!PolymerResourcePackUtils.addModAssets(MOD_ID)) {
+            throw new IllegalStateException("%s: Unable to add assets to Polymer".formatted(MOD_ID));
+        }
 
 		LOGGER.info("Initialization complete");
 	}
