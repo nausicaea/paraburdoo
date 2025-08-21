@@ -3,12 +3,13 @@
 	"id": "paraburdoo",
 	"version": "${version}",
 	"name": "Paraburdoo",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": ["developer@nausicaea.net"],
+	"description": "A small mod that adds additional recipes to PolyFactory",
+	"authors": ["Eleanor Young <developer@nausicaea.net>"],
 	"contact": {
+		"homepage": "https://github.com/nausicaea/paraburdoo",
 		"sources": "https://github.com/nausicaea/paraburdoo"
 	},
-	"license": "CC0-1.0",
+	"license": "GPL-3.0-only",
 	"icon": "assets/paraburdoo/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -23,10 +24,15 @@
       "paraburdoo.mixins.json"
     ],
 	"depends": {
-		"fabricloader": ">=0.17.2",
-		"minecraft": "~1.21.4",
+		"fabricloader": "~${fabric_loader_version}",
+		"minecraft": "~${minecraft_version}",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+        "polyfactory": ">=${polyfactory_version}",
+        "polymer": ">=${polymer_version}"
+
 	},
-	"suggests": {}
+    "suggests": {
+        "polydex": ">=${polydex_version}"
+    }
 }
