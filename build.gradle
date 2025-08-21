@@ -142,6 +142,11 @@ jar {
 	}
 }
 
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
 // configure the maven publication
 if (maven_repo != null) {
     publishing {
