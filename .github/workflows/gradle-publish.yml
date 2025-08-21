@@ -76,6 +76,14 @@ jobs:
         YARN_MAPPINGS_VERSION: ${{ vars.YARN_MAPPINGS_VERSION }}
         FABRIC_LOADER_VERSION: ${{ vars.FABRIC_LOADER_VERSION }}
 
+    - name: Capture dependency verification artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: DependencyVerification
+        path: build/reports/dependency-verification/
+        retention_days: 1
+
     - name: Capture build artifacts
       uses: actions/upload-artifact@v4
       with:
