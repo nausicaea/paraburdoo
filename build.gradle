@@ -26,6 +26,10 @@ version = semver(
 )
 group = project.maven_group
 
+configurations.configureEach {
+    resolutionStrategy.failOnChangingVersions()
+}
+
 base {
 	archivesName = project.archives_base_name
 }
@@ -50,10 +54,6 @@ repositories {
             includeGroup 'maven.modrinth'
         }
     }
-}
-
-dependencyLocking {
-    lockAllConfigurations()
 }
 
 loom {
