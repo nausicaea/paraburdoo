@@ -4,14 +4,11 @@ plugins {
 }
 
 def maven_repo = System.env.MAVEN_REPO
-def project_prerelease_info = System.env.PROJECT_PRERELEASE_INFO ?: ''
-def project_version_metadata = System.env.PROJECT_VERSION_METADATA ?: ''
-def minecraft_version = System.env.MINECRAFT_VERSION
-assert minecraft_version != null : "You must specify the environment variable 'MINECRAFT_VERSION'"
-def yarn_mappings_version = System.env.YARN_MAPPINGS_VERSION
-assert yarn_mappings_version != null : "You must specify the environment variable 'YARN_MAPPINGS_VERSION'"
-def fabric_loader_version = System.env.FABRIC_LOADER_VERSION
-assert fabric_loader_version != null : "You must specify the environment variable 'FABRIC_LOADER_VERSION'"
+def minecraft_version = System.env.MINECRAFT_VERSION ?: '1.21.4'
+def yarn_mappings_version = System.env.YARN_MAPPINGS_VERSION ?: '1.21.4+build.8'
+def fabric_loader_version = System.env.FABRIC_LOADER_VERSION ?: '0.17.2'
+def project_prerelease_info = System.env.PROJECT_PRERELEASE_INFO ?: 'dirty'
+def project_version_metadata = System.env.PROJECT_VERSION_METADATA ?: minecraft_version.replace('.', '-')
 
 def semver = { major, minor, patch, prerelease = '', metadata = '' ->
     def version = "${major}.${minor}.${patch}"
