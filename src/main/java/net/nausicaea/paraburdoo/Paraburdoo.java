@@ -4,11 +4,9 @@ import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 
 import net.nausicaea.paraburdoo.block.ModBlocks;
-import net.nausicaea.paraburdoo.fluid.ModFluids;
-import net.nausicaea.paraburdoo.fluid.ModPolyfactoryFluids;
+import net.nausicaea.paraburdoo.fluid.ModFluidTypes;
 import net.nausicaea.paraburdoo.item.ModItemGroups;
 import net.nausicaea.paraburdoo.item.ModItems;
-import net.nausicaea.paraburdoo.tag.ModTags;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,16 +20,14 @@ public class Paraburdoo implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-        ModFluids.registerAll();
-        ModPolyfactoryFluids.registerAll();
-        ModItems.registerAll();
+        ModFluidTypes.registerAll();
         ModBlocks.registerAll();
+        ModItems.registerAll();
         ModItemGroups.registerAll();
-        ModTags.registerAll();
-        PolymerResourcePackUtils.addModAssets(MOD_ID);
+
+        if (!PolymerResourcePackUtils.addModAssets(MOD_ID)) {
+            throw new IllegalStateException("%s: Unable to add assets to Polymer".formatted(MOD_ID));
+        }
 
 		LOGGER.info("Initialization complete");
 	}

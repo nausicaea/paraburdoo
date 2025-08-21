@@ -1,0 +1,62 @@
+name: Dependency Submission
+
+on:
+  push:
+    branches: [ "main", "release/*" ]
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ "main", "release/*" ]
+
+permissions:
+  contents: write
+
+jobs:
+  dependency-submission:
+    runs-on: ubuntu-latest
+    environment: Minecraft 1.21.4
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+    
+    - name: Create prerelease for development
+      if: github.ref_type != 'tag'
+      run: echo "PROJECT_PRERELEASE_INFO=dev" >> $GITHUB_ENV
+
+    - name: Create version metadata for development
+      if: github.ref_type != 'tag'
+      run: |
+        set -xe
+        fingerprint="$(echo ${{github.sha}} | head -c7)"
+        minecraft_version="$(echo $MINECRAFT_VERSION | sed -e 's/\./-/g')"
+        echo "PROJECT_VERSION_METADATA=${fingerprint}.${minecraft_version}" >> $GITHUB_ENV
+      env:
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+
+    - name: Create version metadata for tagged releases
+      if: github.ref_type == 'tag'
+      run: |
+        set -xe
+        minecraft_version="$(echo $MINECRAFT_VERSION | sed -e 's/\./-/g')"
+        echo "PROJECT_VERSION_METADATA=${minecraft_version}" >> $GITHUB_ENV
+      env:
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+        
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+    - name: Generate and submit dependency graph
+      uses: gradle/actions/dependency-submission@v4
+      env:
+        PROJECT_PRERELEASE_INFO: ${{ env.PROJECT_PRERELEASE_INFO }}
+        PROJECT_VERSION_METADATA: ${{ env.PROJECT_VERSION_METADATA }}
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+        YARN_MAPPINGS_VERSION: ${{ vars.YARN_MAPPINGS_VERSION }}
+        FABRIC_LOADER_VERSION: ${{ vars.FABRIC_LOADER_VERSION }}

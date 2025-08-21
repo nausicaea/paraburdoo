@@ -10,9 +10,7 @@ public class ParaburdooDatagen implements DataGeneratorEntrypoint {
         FabricDataGenerator.Pack pack = generator.createPack();
         pack.addProvider(Models::new);
         pack.addProvider(EnUsLanguage::new);
-        pack.addProvider(Recipes::new);
         pack.addProvider(BlockLootTables::new);
-        pack.addProvider(FluidTags::new);
     }
 
 }

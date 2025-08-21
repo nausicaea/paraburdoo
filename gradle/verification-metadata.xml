@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<verification-metadata xmlns="https://schema.gradle.org/dependency-verification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://schema.gradle.org/dependency-verification https://schema.gradle.org/dependency-verification/dependency-verification-1.3.xsd">
+   <configuration>
+      <verify-metadata>true</verify-metadata>
+      <verify-signatures>true</verify-signatures>
+      <key-servers>
+         <key-server uri="https://keyserver.ubuntu.com"/>
+         <key-server uri="https://keys.openpgp.org"/>
+      </key-servers>
+      <trusted-artifacts>
+         <trust group="net.minecraft" regex="true" reason="Generated via loom"/>
+         <trust group="remapped.*" regex="true" reason="Generated via loom"/>
+      </trusted-artifacts>
+      <trusted-keys>
+         <trusted-key id="042B29E928995B9DB963C636C7CA19B7B620D787" group="com.github.stephenc.jcip" name="jcip-annotations" version="1.0-1"/>
+         <trusted-key id="077E8893A6DCC33DD4A4D5B256E73BA9A0B592D0" group="^org[.]apache[.]logging($|([.].*))" regex="true"/>
+         <trusted-key id="0785B3EFF60B1B1BEA94E0BB7C25280EAE63EBE5" group="org.apache.httpcomponents"/>
+         <trusted-key id="0CB5871FB7BF3B351614BBF6CA85FFE638D4407A" group="it.unimi.dsi" name="fastutil" version="8.5.15"/>
+         <trusted-key id="0D35D3F60078655126908E8AF3D1600878E85A3D" group="io.netty"/>
+         <trusted-key id="0EBCB16A237726FFB2892E7AA5B7381AF8CBB702" group="org.vineflower" name="vineflower" version="1.11.1"/>
+         <trusted-key id="10F3C7A02ECA55E502BADCF3991EFB94DB91127D" group="org.ow2" name="ow2" version="1.5.1"/>
+         <trusted-key id="176E27B72061F21D6FE6286241CB03A1BB3BAD60" group="io.netty"/>
+         <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework" name="checker-qual"/>
+         <trusted-key id="1D04A424F505394DBED15D451D0690E353BE126D" group="net.minidev"/>
+         <trusted-key id="20B0D1DA0F0643E3FB281C1A93496A66B36BCD66" group="org.jcraft" name="jorbis" version="0.0.17"/>
+         <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" group="^com[.]fasterxml($|([.].*))" regex="true"/>
+         <trusted-key id="2AB7444A58DA93C195CFEC2236F61598F39F67B0" group="org.cadixdev"/>
+         <trusted-key id="2B34821418CF19CF1F2A8352953E02E4F573B46F" group="jakarta.platform"/>
+         <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB">
+            <trusting group="commons-codec"/>
+            <trusting group="commons-io"/>
+            <trusting group="commons-logging"/>
+            <trusting group="org.apache.commons"/>
+         </trusted-key>
+         <trusted-key id="30FD56E98CD14C2E8983033183073B1B42F9C509" group="org.joml" name="joml" version="1.10.8"/>
+         <trusted-key id="33FD4BFD33554634053D73C0C2148900BCD3C2AF" group="org.jetbrains" name="annotations" version="26.0.2"/>
+         <trusted-key id="34441E504A937F43EB0DAEF96A65176A0FB1CD0B" group="org.apache.groovy" name="groovy-bom" version="4.0.22"/>
+         <trusted-key id="4103C1C3F8E51C6925B5CD346A1E81B00431AB9D" group="com.github.oshi"/>
+         <trusted-key id="44FBDBBC1A00FE414F1C1873586654072EAD6677" group="org.sonatype.oss" name="oss-parent" version="9"/>
+         <trusted-key id="48B086A7D843CFA258E83286928FBF39003C0425" group="org.springframework" name="spring-framework-bom" version="5.3.39"/>
+         <trusted-key id="517B94F8D0A46317A28D8AB30DA8A5EC02D11EAD" group="net.sf.jopt-simple" name="jopt-simple" version="5.0.4"/>
+         <trusted-key id="53C935821AA6A755BD337DB53595395EB3D8E1BA" group="org.apache.logging.log4j"/>
+         <trusted-key id="55ABBEF06CF6277A23B1D3A21993B355097C8B5A" group="org.lz4" name="lz4-java" version="1.8.0"/>
+         <trusted-key id="60200AC4AE761F1614D6C46766D68DAA073BE985" group="org.slf4j"/>
+         <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1" group="com.google.guava" name="guava-parent" version="26.0-android"/>
+         <trusted-key id="6F538074CCEBF35F28AF9B066A0975F8B1127B83" group="org.jetbrains.kotlin" name="kotlin-metadata-jvm" version="2.0.21"/>
+         <trusted-key id="70DAD7074E509CFAC21D0FF04C5854FEFA80DC1E" group="org.lwjgl"/>
+         <trusted-key id="7616EB882DAF57A11477AAF559A252FB1199D873" group="com.google.code.findbugs" name="jsr305" version="3.0.2"/>
+         <trusted-key id="7E22D50A7EBD9D2CD269B2D4056ACA74D46000BF" group="io.netty"/>
+         <trusted-key id="82F0964816AD7319CB0CCCF93EFD9D223D715E9A" group="com.nimbusds"/>
+         <trusted-key id="831A96525D05E93E844A1A77437A3C9A63058D2F" group="me.lucko" name="fabric-permissions-api" version="0.3.3"/>
+         <trusted-key id="84789D24DF77A32433CE1F079EB80E92EB2135B1" group="org.apache" name="apache"/>
+         <trusted-key id="8756C4F765C9AC3CB6B85D62379CE192D401AB61" group="org.jetbrains" name="annotations" version="20.1.0"/>
+         <trusted-key id="87D1E546F4F97647F3DED0CE4A4CE2A989CBF73D" group="ca.weblite" name="java-objc-bridge" version="1.1"/>
+         <trusted-key id="8A10792983023D5D14C93B488D7F1BEC1E2ECAE7" group="^com[.]fasterxml($|([.].*))" regex="true"/>
+         <trusted-key id="93E9E69C6193C762C13E3467B77CE638A6C2E562" group="net.minecrell" name="terminalconsoleappender" version="1.3.0"/>
+         <trusted-key id="95A37AC7401C905AD01CFAB848F29632BCC2F0C2" group="io.github.llamalad7" name="mixinextras-fabric" version="0.5.0"/>
+         <trusted-key id="9E2B2198D20DC6E4B02C703111B891CFE51C003E" group="^net[.]fabricmc($|([.].*))" regex="true"/>
+         <trusted-key id="A5BD02B93E7A40482EB1D66A5F69AD087600B22C" group="org.ow2.asm"/>
+         <trusted-key id="A6CECB561835C8E255465CADDA19FF23954820BA" group="com.microsoft.azure" name="msal4j" version="1.17.2"/>
+         <trusted-key id="BDB5FA4FE719D787FB3D3197F6D4A1D411E9D1AE" group="^com[.]google($|([.].*))" regex="true"/>
+         <trusted-key id="C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7" group="com.google.code.gson"/>
+         <trusted-key id="DC98224C6421A7A5BB87F346ED2378CD09A08CDE" group="org.jline"/>
+         <trusted-key id="E52F07877A5805F9AF4AB0ACD46C5610D06E7001" group="com.ibm.icu" name="icu4j" version="76.1"/>
+         <trusted-key id="EE0CA873074092F806F59B65D364ABAA39A47320" group="com.google.errorprone"/>
+         <trusted-key id="FA7929F83AD44C4590F6CC6815C71C0A4E0B8EDD" group="net.java.dev.jna"/>
+         <trusted-key id="FF6E2C001948C5F2F38B0CC385911F425EC61B51" group="org.junit" name="junit-bom"/>
+      </trusted-keys>
+   </configuration>
+   <components>
+      <component group="com.google.code.findbugs" name="jsr305" version="3.0.2">
+         <artifact name="jsr305-3.0.2.pom">
+            <sha256 value="19889dbdf1b254b2601a5ee645b8147a974644882297684c798afe5d63d78dfe" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="com.google.guava" name="guava-parent" version="26.0-android">
+         <artifact name="guava-parent-26.0-android.pom">
+            <sha256 value="f8698ab46ca996ce889c1afc8ca4f25eb8ac6b034dc898d4583742360016cc04" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="com.google.guava" name="listenablefuture" version="9999.0-empty-to-avoid-conflict-with-guava">
+         <artifact name="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.pom">
+            <sha256 value="18d4b1db26153d4e55079ce1f76bb1fe05cdb862ef9954a88cbcc4ff38b8679b" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="com.kneelawk.codextra" name="codextra-fabric" version="2.0.0+1.21">
+         <artifact name="codextra-fabric-2.0.0+1.21-sources.jar">
+            <sha256 value="40872bd221d41df7d964f97298423e9b4fda1dcc69b5924393814b3f2b840052" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="codextra-fabric-2.0.0+1.21.jar">
+            <sha256 value="3f6233274531c022ad39b0e8a764969c1913ffb4e3b26217eada4eaa6334ef31" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="codextra-fabric-2.0.0+1.21.module">
+            <sha256 value="8a07e9ee3e73eb16c0215f13be70b892bd3dd735db262a4fc6a2a847dc362ce8" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.kneelawk.common-events" name="common-events-fabric" version="1.0.0+1.21">
+         <artifact name="common-events-fabric-1.0.0+1.21-sources.jar">
+            <sha256 value="21d82dc873e0d7f7d250b8ece8bd1a131428d93bf8c8acc49a01f1439c22dbb9" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="common-events-fabric-1.0.0+1.21.jar">
+            <sha256 value="88ce25e8801f12655c4c19e87bb6d45d7dc471c2b90895e8de899f98f4c87b2b" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="common-events-fabric-1.0.0+1.21.module">
+            <sha256 value="a57c9710c54926299762f4881bcc1656ebd56d0c860e1599bedf6360abde7d89" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.kneelawk.graphlib" name="graphlib-core-fabric" version="2.0.3+1.21">
+         <artifact name="graphlib-core-fabric-2.0.3+1.21-sources.jar">
+            <sha256 value="8ec068eab307e272562dd33878c17e2d45c7f9c6d658f9ed032f0fd729798d1c" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="graphlib-core-fabric-2.0.3+1.21.jar">
+            <sha256 value="20b0486b7c5ff4b000df56e481ab002c8b6abe387aa8c1c47b81376f0e9ecbc7" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="graphlib-core-fabric-2.0.3+1.21.module">
+            <sha256 value="35caf8f4ccda522b9723a2a5e0bd667541f2cf89d27bd26d7e42c594c82de941" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="authlib" version="6.0.57">
+         <artifact name="authlib-6.0.57.jar">
+            <sha256 value="e40ec0926a408aa05faf902f05dcde7e5f6255f6eeeb17f1e7ffb68b369d809a" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="authlib-6.0.57.pom">
+            <sha256 value="4ec0ac4b4c9adeecccaa3af70d87234c6bdcaa1eb4c009f7c94c0bc8a08c32b0" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="blocklist" version="1.0.10">
+         <artifact name="blocklist-1.0.10.jar">
+            <sha256 value="830bfd639c8db49236bbd8e45d3a2b8c96c56ff654a10118654958a6235d4c44" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="blocklist-1.0.10.pom">
+            <sha256 value="73b4aa393e9df66471acdd43e46d3fd84a3ccfd22b9ca8104588f52df26139d3" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="brigadier" version="1.3.10">
+         <artifact name="brigadier-1.3.10.jar">
+            <sha256 value="c8ee4136e474ac7723ca2b432ec8d1a2bc88ef7d1ec57c314ba9e33cdc83dd75" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="brigadier-1.3.10.pom">
+            <sha256 value="39bf2bf7d278987faa42f698ba22f7ae65a12c77fa428ca5d23ccc7779563f9d" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="datafixerupper" version="8.0.16">
+         <artifact name="datafixerupper-8.0.16.jar">
+            <sha256 value="ffc138bc2596c291781b0d5e211ccac51f0f2345f27fc2742f335cedf7e2870d" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="datafixerupper-8.0.16.pom">
+            <sha256 value="6c77153dd0b0e8eff8f0bc66aefb1cd8bf66fb77cff46e3854cfa0b9d9bab50c" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="jtracy" version="1.0.29">
+         <artifact name="jtracy-1.0.29-natives-linux.jar">
+            <sha256 value="d9f5ed87582bdd39e3f36641373d1aa60e6d097f699f759feb595abace5c76b1" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="jtracy-1.0.29-natives-macos.jar">
+            <sha256 value="9c48e08acc0f3de41c82cbb803ed8da349834682a52f8f24efde0b77ef8e4723" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="jtracy-1.0.29-natives-windows.jar">
+            <sha256 value="dd1f67e20a224958c56ebb673f950439ac2137d2666a2ab092c4ae3582f2be78" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="jtracy-1.0.29.jar">
+            <sha256 value="017dfd1aa6f536cfcb8f643830f6f9f17028e8277417a4741a92c46e47424dda" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="jtracy-1.0.29.pom">
+            <sha256 value="85ba29742305205f32dc4f09c28573484ed2288614eb6ef0f23b236a2187759f" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="logging" version="1.5.10">
+         <artifact name="logging-1.5.10.jar">
+            <sha256 value="de3031f2420d649b9a4152e4e160d50b87ce6e7b4d68163caf2b5ebbaf391f7e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="logging-1.5.10.pom">
+            <sha256 value="4b00e3a9f5bbccfc96a24cf8e177594b68cebfc5f788570bd5cfeee2c3c3c0cc" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="patchy" version="2.2.10">
+         <artifact name="patchy-2.2.10.jar">
+            <sha256 value="16d70e7968b45caffc81576268eb000f473fb60bf257182d3447dea8ec919d5a" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="patchy-2.2.10.pom">
+            <sha256 value="b0c8a5c15f27ed880083bbe05cfae2d595442831db7a7f088ed93ed0a4d0dd7c" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="com.mojang" name="text2speech" version="1.17.9">
+         <artifact name="text2speech-1.17.9.jar">
+            <sha256 value="c2a95b499e76fada7dd63e9b0ec797b678d411c2b0ee6f37f4dc674662bfb0af" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="text2speech-1.17.9.pom">
+            <sha256 value="a12957cb693528b83247898ff3bec9ff293886a47287a8d94b0d9fae3a3a3703" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="common-protection-api" version="1.0.0">
+         <artifact name="common-protection-api-1.0.0-sources.jar">
+            <sha256 value="f5da3cd65abe06ee812d7f31dbe77d75ca1153ed83f0e4593731f904ab561b37" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="common-protection-api-1.0.0.jar">
+            <sha256 value="3e2b921664d91ef819d332d2a6af17bd0d6dbf71fd7d8fe86643ca38cea02fcb" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="common-protection-api-1.0.0.module">
+            <sha256 value="0f8229b67a2de0434f9910a07e3adeb801b7c8db3020a127bc6fd8d9204e2e37" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="factorytools" version="0.5.0+1.21.4">
+         <artifact name="factorytools-0.5.0+1.21.4-sources.jar">
+            <sha256 value="cad7997403df4ce73db23f5021a488cf1f15ae1ea60285e2e6011bc236603eb6" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="factorytools-0.5.0+1.21.4.jar">
+            <sha256 value="a08c395f0382a0fa339db61b0565d6558aff59d850d630813f6922768d06a8a3" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="factorytools-0.5.0+1.21.4.pom">
+            <sha256 value="b2a335d36b76e4394d312ecd2745b211c6c91a88e923cace0bc8b72d85bb5d27" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="map-canvas-api" version="0.5.0+1.21.3">
+         <artifact name="map-canvas-api-0.5.0+1.21.3-sources.jar">
+            <sha256 value="f68b21c433979a1493bc81ab8716ede58fdfd7e6b53de746c481732aea3202c6" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="map-canvas-api-0.5.0+1.21.3.jar">
+            <sha256 value="94c1cbfe207727b81261e28b937a4151d3ce4339d2b1aa32952b3fa0f503eb92" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="map-canvas-api-0.5.0+1.21.3.pom">
+            <sha256 value="84dba2b1ae5b4ba4f726394bf9ce0ff1eebe5d2ed9604437b93dfa25cfe82c4e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="placeholder-api" version="2.5.1+1.21.3">
+         <artifact name="placeholder-api-2.5.1+1.21.3-sources.jar">
+            <sha256 value="09ed46360e4258b1d58bf341b00aa905043f8c69a884daf0e344fc0f0e291a9e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="placeholder-api-2.5.1+1.21.3.jar">
+            <sha256 value="9cf0db9ef594e8bba7bcc98445150f6bfebc4644e0791d7b42393552220b6656" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="placeholder-api-2.5.1+1.21.3.pom">
+            <sha256 value="9765fd08446666329a595e2064237ed23eaf8c96b4ee36637a4fe50e5b189ff7" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="player-data-api" version="0.7.0+1.21.3">
+         <artifact name="player-data-api-0.7.0+1.21.3-sources.jar">
+            <sha256 value="9e54188c58a620997a1b82c80d8adc3faac0d481ed9f64d51b3f93285368a4fd" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="player-data-api-0.7.0+1.21.3.jar">
+            <sha256 value="fc8f80b121874e2ce3df86f34627afcf29b44e3f64d6e1692d72f3833e5c3a5f" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="player-data-api-0.7.0+1.21.3.pom">
+            <sha256 value="c9f87fe5592b984c3f29f18e01bc050667578b801cf18b222c7cafdce1140b39" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-autohost" version="0.11.8+1.21.4">
+         <artifact name="polymer-autohost-0.11.8+1.21.4-sources.jar">
+            <sha256 value="931a857e5baae1c37f51ba15103214a603892881c2dd5515c9a29bfee9e3145a" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-autohost-0.11.8+1.21.4.jar">
+            <sha256 value="d0cd7cafe7e96cb760bb21859d7d76bee98bf231e8723a9856e20e9c53cc1426" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-autohost-0.11.8+1.21.4.module">
+            <sha256 value="693d741d6d9e4b79d5cfa6bebfb6912d633a727c07a9d3ac0bbcabf87ac5e1b9" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-blocks" version="0.11.8+1.21.4">
+         <artifact name="polymer-blocks-0.11.8+1.21.4-sources.jar">
+            <sha256 value="0a9f839f900238d139aa8033391738ac68913ef40494bc0df49348dbd3b18966" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-blocks-0.11.8+1.21.4.jar">
+            <sha256 value="c45502fa03067b96813a6bde344c3ce20c3e05e9df5d2ae77afddda671c7a6d1" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-blocks-0.11.8+1.21.4.module">
+            <sha256 value="92bdcf45763627bea2231cbc44eb043afeabee0c5ede782d6b9183b47359c198" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-common" version="0.11.8+1.21.4">
+         <artifact name="polymer-common-0.11.8+1.21.4-sources.jar">
+            <sha256 value="922c89d5549b34632ecaecf29a669b7d290daaf584362eb105e93c00f3ebc3e8" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-common-0.11.8+1.21.4.jar">
+            <sha256 value="cb933ae0449fdbce5a32f6d27b35368e959e0d99b7570d6329f0a880889d9c24" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-common-0.11.8+1.21.4.module">
+            <sha256 value="e5e47e00e14d897d5b635144c8d53cb9a7cd01e0153f846d138d810f9e35f341" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-core" version="0.11.8+1.21.4">
+         <artifact name="polymer-core-0.11.8+1.21.4-sources.jar">
+            <sha256 value="a2490e0c07411a199c734300d6d2ca4161f8083a62111d7cf08e20f9df0313fb" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-core-0.11.8+1.21.4.jar">
+            <sha256 value="9051978d3af535d61c1226c5530af9e05346cf1385feb9e3a3748412cea8fe74" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-core-0.11.8+1.21.4.module">
+            <sha256 value="d940ec9939a9d1bbd77d2d6b7045ae2214119995fbebad45d4da29a511356ecc" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-networking" version="0.11.8+1.21.4">
+         <artifact name="polymer-networking-0.11.8+1.21.4-sources.jar">
+            <sha256 value="e12f8c3a68c418893f2d027b3837f86e0840cc62427eabaa51eb926490037ddf" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-networking-0.11.8+1.21.4.jar">
+            <sha256 value="d1725274ed4f563d1cbad40a0c6527da45feb189ec8b25a6ab36216ae75cc3f3" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-networking-0.11.8+1.21.4.module">
+            <sha256 value="0fdbeb4fc2fc6e4a4e8e017b8fc35ff4a6fec33a5ce0a62692db51ec33d3a1e2" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-reg-sync-manipulator" version="0.11.8+1.21.4">
+         <artifact name="polymer-reg-sync-manipulator-0.11.8+1.21.4-sources.jar">
+            <sha256 value="5f63cb25656e02833d3aa6b1a10b3569b8c1d6865c628060a8442ec6b2785379" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-reg-sync-manipulator-0.11.8+1.21.4.jar">
+            <sha256 value="a54aea46ee95f92c33d62bd7c396f3bed6cbfc6fdad695013ef062e9682d3f6e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-reg-sync-manipulator-0.11.8+1.21.4.module">
+            <sha256 value="6ed844487733a3d3f60cf6aa610a0623b06d959551a92805864c00cde553e604" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-resource-pack" version="0.11.8+1.21.4">
+         <artifact name="polymer-resource-pack-0.11.8+1.21.4-sources.jar">
+            <sha256 value="4511c99ad73e146abcba7dc99429e1dbe8279d9abb35f289aa571f58128f14cd" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-resource-pack-0.11.8+1.21.4.jar">
+            <sha256 value="b73af99297f9ddaedea4e54aeee7a37f8692c77aa295f443d45e2934dd62d7ea" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-resource-pack-0.11.8+1.21.4.module">
+            <sha256 value="9bcfb712bc5b0190f06fbb5ff0e572e7da030f1138f3e2b456096929fe72ae66" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-resource-pack-extras" version="0.11.8+1.21.4">
+         <artifact name="polymer-resource-pack-extras-0.11.8+1.21.4-sources.jar">
+            <sha256 value="597138d7e750de38a00f40df35c5d0c6727373cf39d93f1327fab55cdc7329e1" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-resource-pack-extras-0.11.8+1.21.4.jar">
+            <sha256 value="53e8e09e7b194fe4abe2fefc6cdfb767842e15441267d7a4cc4efcbc3dc07ef0" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-resource-pack-extras-0.11.8+1.21.4.module">
+            <sha256 value="3ef7e3a8cbd624386174664370ec427a2009de4011c6855f9cfc3b89958087cc" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="polymer-virtual-entity" version="0.11.8+1.21.4">
+         <artifact name="polymer-virtual-entity-0.11.8+1.21.4-sources.jar">
+            <sha256 value="34b9317cf8558367f0c067e934d26cfb4c1981506e3bdf238a1f087db62dae3e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-virtual-entity-0.11.8+1.21.4.jar">
+            <sha256 value="16574045d40f19aba4c769978aa58bfcd7ecce76179e9b53ed656913e507a8a8" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polymer-virtual-entity-0.11.8+1.21.4.module">
+            <sha256 value="80299a33b98c66660eb71cf63f30c6417bfe0f808140413e5a32156ad36f3ce6" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="predicate-api" version="0.6.0+1.21.2">
+         <artifact name="predicate-api-0.6.0+1.21.2-sources.jar">
+            <sha256 value="8af4ce38e4e3f14a03ca1d817732349c7ff842e4ae7417bc0932edc2746e3316" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="predicate-api-0.6.0+1.21.2.jar">
+            <sha256 value="018e7f3c420e5dea267f202bc5ba0816d9e15f6b8793b4653562a80dbc1aaad5" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="predicate-api-0.6.0+1.21.2.pom">
+            <sha256 value="87e1d61df43bb685e190c69fa1f5b6c574ff1d8685c716b3d48eb41e65f756fe" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="sgui" version="1.8.1+1.21.4">
+         <artifact name="sgui-1.8.1+1.21.4-sources.jar">
+            <sha256 value="0af5161dd6db896198292952d3dd29a9d315eded79224f18dd3f34024578a6da" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sgui-1.8.1+1.21.4.jar">
+            <sha256 value="abd6d53911c209e7e6ffe60260e22a0a3122c543f40361c4ac26e131f1e0b3a9" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sgui-1.8.1+1.21.4.pom">
+            <sha256 value="4972c50b255982a78950f26992b91f3671c6fd6213f33ef8f11a5b0c594d51b1" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="sgui" version="1.8.2+1.21.4">
+         <artifact name="sgui-1.8.2+1.21.4-sources.jar">
+            <sha256 value="33744919223d0aaf9c5227c32faeaa38dad065886dec67ba935e5d067fd30505" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sgui-1.8.2+1.21.4.jar">
+            <sha256 value="4ab56040e94f101e736e333822b04c836e2586680a977a8d13be650621ae6d1c" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sgui-1.8.2+1.21.4.pom">
+            <sha256 value="ade77db5c8da144faef812f7b167128832ffc8d5c3f7dba76d18c2c43d638a64" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="sidebar-api" version="0.5.0+1.21">
+         <artifact name="sidebar-api-0.5.0+1.21-sources.jar">
+            <sha256 value="7aea1386d315db5911566a89711a693d150193b7cafae7d34a74d10dd8ba4308" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sidebar-api-0.5.0+1.21.jar">
+            <sha256 value="614495cd296ce768462cd7e197970a79468b8029674685d01fe53b198206c5a3" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sidebar-api-0.5.0+1.21.pom">
+            <sha256 value="bd3b50b03e7c23f9d3ece60416af39193cb3dd0a509d199f3b4688afd8b09642" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="eu.pb4" name="sidebar-api" version="0.5.1+1.21.1">
+         <artifact name="sidebar-api-0.5.1+1.21.1-sources.jar">
+            <sha256 value="eb401fb0e66b0b69a45d4fd25b47a50401caf75061840ab2fbe36523bd5ed672" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sidebar-api-0.5.1+1.21.1.jar">
+            <sha256 value="23f96af0cfd8d1380d740588ac5142633e5f7bfcb4bc43b8eb7a672c1d4e048c" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="sidebar-api-0.5.1+1.21.1.pom">
+            <sha256 value="a258b4e199e49162f8c418d3189b0bd976c960bb51f73bd1ee67b95ec91e9b5d" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="fabric-loom" name="fabric-loom.gradle.plugin" version="1.11.7">
+         <artifact name="fabric-loom.gradle.plugin-1.11.7.pom">
+            <sha256 value="733a8b31f55489cdd34f72ece2fee4bc41aeae11732f897f633d2dfceef6ce87" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="maven.modrinth" name="polydex" version="1.4.2+1.21.4">
+         <artifact name="polydex-1.4.2+1.21.4.jar">
+            <sha256 value="f1ec2f5714dcf84c892245f5e9060cbcb01212324e2192ea3e7b7f1bd59938c9" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polydex-1.4.2+1.21.4.pom">
+            <sha256 value="7a7f0f433d5ba218756d45d71d0f5bc014d6037f14e8451c796f20b4746de910" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="maven.modrinth" name="polyfactory" version="0.6.4+1.21.4">
+         <artifact name="polyfactory-0.6.4+1.21.4.jar">
+            <sha256 value="f5fd316a468abc33bc766273282a84404597a2a54bb35d4a66b5b3ad1fb37c3a" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="polyfactory-0.6.4+1.21.4.pom">
+            <sha256 value="88582e29b4701413c0c112f577a39b532d7a4be2184ae7557b5664e0fd1570ac" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="cfr" version="0.2.2">
+         <artifact name="cfr-0.2.2.jar">
+            <sha256 value="9d2987d2af2c5574856843d4dea7fccd0e4c7604183aad21c285d4baa09da776" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="cfr-0.2.2.module">
+            <sha256 value="337eb993137d3656e438d14a5ff0fa68c190cdae06326748ed3a483a1e4efd14" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="dev-launch-injector" version="0.2.1+build.8">
+         <artifact name="dev-launch-injector-0.2.1+build.8.jar">
+            <sha256 value="63bebba2a134d891ac9ac1fec6746ae055cbb19a187e2e2e05a0b9ea857952d8" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="dev-launch-injector-0.2.1+build.8.pom">
+            <sha256 value="92ec17d6b0e1ce0021247d9ebdd9f77054f23d697d03bd5dc5c6ac30d74bf3f5" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="fabric-fernflower" version="2.0.0">
+         <artifact name="fabric-fernflower-2.0.0.jar">
+            <sha256 value="3ca6ef24715995b415c5f5d62a1bac21c2ba1f36e5655f9a6768c7044a042d92" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="fabric-fernflower-2.0.0.pom">
+            <sha256 value="552419a9535e73f9684e2377c1cf26b6a49ea8ca7dac386735e59485704c5739" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="fabric-loom" version="1.11.7">
+         <artifact name="fabric-loom-1.11.7.jar">
+            <sha256 value="853083de3f28d79724dbeb2eea383af8b151b9becbd5c8f6a612e97aba70846b" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="fabric-loom-1.11.7.module">
+            <sha256 value="5d3cfc13e6b42194c4f51810a8abf18e3bab1c95e378db8fb883939e31c02183" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="fabric-loom-native" version="0.2.0">
+         <artifact name="fabric-loom-native-0.2.0.jar">
+            <sha256 value="590f8966d3136d92acbdcf6d1107dac789e5d6af219d766dfdc3b1c0fe3cee81" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="fabric-loom-native-0.2.0.pom">
+            <sha256 value="8370853dca591385d934a560aac0993f121286877893ada50553d3260b46a05d" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="fabric-mixin-compile-extensions" version="0.6.0">
+         <artifact name="fabric-mixin-compile-extensions-0.6.0.jar">
+            <sha256 value="23a8ffb25038ba5ddeee30182eb17144e89b9cc5a72c25a9486d0030f9aa4ca6" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="fabric-mixin-compile-extensions-0.6.0.module">
+            <sha256 value="86db2801aa4d6d7715064bae0f2bead2184e6880deeb95bfabe4e58bd8e3bcf5" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="intermediary" version="1.21.4">
+         <artifact name="intermediary-1.21.4-v2.jar">
+            <sha256 value="2ca8d753e5338f78a44379567b391978ec694c08f681880f81ce76999da8ef51" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="intermediary-1.21.4.pom">
+            <sha256 value="ca7b1bb484e792da0543c1373b8b756bb4a7379d22b99f1145342416c5b53432" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="lorenz-tiny" version="4.0.2">
+         <artifact name="lorenz-tiny-4.0.2.jar">
+            <sha256 value="9ea2b49f6149cf29917576af5024489b3927e2ec673aced27687a14f3aa99e7e" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="lorenz-tiny-4.0.2.module">
+            <sha256 value="515c5ce9eddd85e8a2b4540238e4acfa98cbeb75111261e5b4c8686923863c09" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="mapping-io" version="0.2.1">
+         <artifact name="mapping-io-0.2.1.jar">
+            <sha256 value="0f10bf89b161369052ffacfe08ff4edbce91371a89c7967dccfd83b092a39a97" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="mapping-io-0.2.1.module">
+            <sha256 value="bb2d78541e61584ca989f4adb74dc47abd03d0c562aa3a9a72ec3007d32bb9ca" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="mercury" version="0.4.2">
+         <artifact name="mercury-0.4.2.jar">
+            <sha256 value="cef38b402ab4a2afd4d6a00d2f3366a66b4ea4121046a728a788d544b492ef6d" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="mercury-0.4.2.pom">
+            <sha256 value="c916fdc160be8bdd3c2b3802c03eab8e6d418abecb0aa5804714e8fb35398b48" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="stitch" version="0.6.2">
+         <artifact name="stitch-0.6.2.jar">
+            <sha256 value="3209f1fefba59f3ded04935463f2aabd137f1bf409cb42dab9a5870dd058b1a1" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="stitch-0.6.2.module">
+            <sha256 value="d1e2e12275ef0d7d043f9693838f01fc4092ee1e115bebdbf4f39bdece4ecea0" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="tiny-mappings-parser" version="0.3.0+build.17">
+         <artifact name="tiny-mappings-parser-0.3.0+build.17.jar">
+            <sha256 value="ab91038c4b1bff9b0999eb6959e012cd0e0bf116401ebab37001ec325d877ba6" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="tiny-mappings-parser-0.3.0+build.17.module">
+            <sha256 value="ecf3ce9b18344decb3cc2fbc2c4ff4fa421d825c9e5a1126e5a29e0424995003" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="tiny-remapper" version="0.11.1">
+         <artifact name="tiny-remapper-0.11.1.jar">
+            <sha256 value="31b7b246923190fd3df59f4b88fafe5ccc7d5daf2bbee093ebfe3071210e1162" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="tiny-remapper-0.11.1.module">
+            <sha256 value="750f68ead7030d988be0492caafffe65fe55f052b8f0c7c32b0ee008dffb728f" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc" name="yarn" version="1.21.4+build.8">
+         <artifact name="yarn-1.21.4+build.8-constants.jar">
+            <sha256 value="c6deada2fac53b8ea6523dbda77597b128006674616f140f04df23264c6d1aa3" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="yarn-1.21.4+build.8-v2.jar">
+            <sha256 value="a7a042f45ebc0384d5b72c926a435695610380c1a4dab0992fa8dd0aa386f960" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="yarn-1.21.4+build.8.pom">
+            <sha256 value="307f23c357e56c52eefdd1959398cd80f207bf5e4bf14e95e1286eb079672e04" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc.unpick" name="unpick" version="3.0.0-beta.9">
+         <artifact name="unpick-3.0.0-beta.9.jar">
+            <sha256 value="861e5d7498b2f637b8601f40c3a79226fe25d591674eba236c71f820595c260d" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="unpick-3.0.0-beta.9.module">
+            <sha256 value="09c78ef8bdcfb52efab3910c471d9a7e8ff94088b1d26bda51adfc5dffbd63e4" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="net.fabricmc.unpick" name="unpick-format-utils" version="3.0.0-beta.9">
+         <artifact name="unpick-format-utils-3.0.0-beta.9.jar">
+            <sha256 value="62f87c406dea167f7974db329d7bcd8d01b2bb6ae68fc664c427e1d8a695accc" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="unpick-format-utils-3.0.0-beta.9.module">
+            <sha256 value="2b7f29e30afb673e61217728e5e8334f83bbdfc3dd261ad11f57bfc06dc4f41c" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="org.apache" name="apache" version="18">
+         <artifact name="apache-18.pom">
+            <pgp value="190D5A957FF22273E601F7A7C92C5FEC70161C62"/>
+         </artifact>
+      </component>
+      <component group="org.apache" name="apache" version="21">
+         <artifact name="apache-21.pom">
+            <pgp value="FA77DCFEF2EE6EB2DEBEDD2C012579464D01C06A"/>
+         </artifact>
+      </component>
+      <component group="org.apache.groovy" name="groovy-bom" version="4.0.22">
+         <artifact name="groovy-bom-4.0.22.pom">
+            <pgp value="34441E504A937F43EB0DAEF96A65176A0FB1CD0B"/>
+         </artifact>
+      </component>
+      <component group="org.apache.logging" name="logging-parent" version="1">
+         <artifact name="logging-parent-1.pom">
+            <pgp value="9D0A56AAA0D60E0C0C7DCCC0B4C70893B62BABE8"/>
+         </artifact>
+      </component>
+      <component group="org.eclipse.ee4j" name="project" version="1.0.7">
+         <artifact name="project-1.0.7.pom">
+            <pgp value="AA70C7C433D501636392EC02153E7A3C2B4E5118"/>
+         </artifact>
+      </component>
+      <component group="org.lwjgl" name="lwjgl-freetype" version="3.3.3">
+         <artifact name="lwjgl-freetype-3.3.3-natives-macos-patch.jar">
+            <sha256 value="87e9c8490ebd7bd1bf8853401a0f2046494c1762cbfec59248173740e71d6878" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="org.mockito" name="mockito-bom" version="4.11.0">
+         <artifact name="mockito-bom-4.11.0.pom">
+            <pgp value="147B691A19097624902F4EA9689CBE64F4BC997F"/>
+         </artifact>
+      </component>
+      <component group="org.ow2" name="ow2" version="1.5.1">
+         <artifact name="ow2-1.5.1.pom">
+            <sha256 value="321ddbb7ee6fe4f53dea6b4cd6db74154d6bfa42391c1f763b361b9f485acf05" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="org.sonatype.oss" name="oss-parent" version="7">
+         <artifact name="oss-parent-7.pom">
+            <sha256 value="b51f8867c92b6a722499557fc3a1fdea77bdf9ef574722fe90ce436a29559454" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="org.sonatype.oss" name="oss-parent" version="9">
+         <artifact name="oss-parent-9.pom">
+            <sha256 value="fb40265f982548212ff82e362e59732b2187ec6f0d80182885c14ef1f982827a" origin="Generated by Gradle"/>
+         </artifact>
+      </component>
+      <component group="org.springframework" name="spring-framework-bom" version="5.3.39">
+         <artifact name="spring-framework-bom-5.3.39.pom">
+            <pgp value="48B086A7D843CFA258E83286928FBF39003C0425"/>
+         </artifact>
+      </component>
+      <component group="xyz.nucleoid" name="packet-tweaker" version="0.6.0-pre.1+1.21.2-pre3">
+         <artifact name="packet-tweaker-0.6.0-pre.1+1.21.2-pre3-sources.jar">
+            <sha256 value="69e0a2a2f85e4375bc280376c158b1ce5eb229a194b206b6b80bf3cc1d417632" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="packet-tweaker-0.6.0-pre.1+1.21.2-pre3.jar">
+            <sha256 value="5691e68cb6b0f4d628039dbc4e780818fcbbc182ed3ad4f5c28f54a5b61026df" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="packet-tweaker-0.6.0-pre.1+1.21.2-pre3.pom">
+            <sha256 value="1661e62b5fdbf40f7616fe6a8977d0246273468e2bfd5de473b8199a601ad539" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+      <component group="xyz.nucleoid" name="server-translations-api" version="2.4.0+1.21.2-rc1">
+         <artifact name="server-translations-api-2.4.0+1.21.2-rc1-sources.jar">
+            <sha256 value="6b40dca711d28c7d7305a80a354e1d037e8120fa144a8db1809b72461a6dc484" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="server-translations-api-2.4.0+1.21.2-rc1.jar">
+            <sha256 value="b3ebc02b4cfda08d73fb86e13978277bb04a7561d529ac05b31c625336c8a889" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+         <artifact name="server-translations-api-2.4.0+1.21.2-rc1.module">
+            <sha256 value="3cfd37090a84252a544dadd24b36c617770de97423e3bf614b6a2b40e3a9b802" origin="Generated by Gradle" reason="Artifact is not signed"/>
+         </artifact>
+      </component>
+   </components>
+</verification-metadata>

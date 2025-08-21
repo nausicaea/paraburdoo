@@ -3,21 +3,60 @@ plugins {
 	id 'maven-publish'
 }
 
-version = project.mod_version
+def maven_repo = System.env.MAVEN_REPO
+def minecraft_version = System.env.MINECRAFT_VERSION ?: '1.21.4'
+def yarn_mappings_version = System.env.YARN_MAPPINGS_VERSION ?: '1.21.4+build.8'
+def fabric_loader_version = System.env.FABRIC_LOADER_VERSION ?: '0.17.2'
+def project_prerelease_info = System.env.PROJECT_PRERELEASE_INFO ?: 'dirty'
+def project_version_metadata = System.env.PROJECT_VERSION_METADATA ?: minecraft_version.replace('.', '-')
+
+def semver = { major, minor, patch, prerelease = '', metadata = '' ->
+    def version = "${major}.${minor}.${patch}"
+    if (prerelease.size() > 0) version += "-${prerelease}"
+    if (metadata.size() > 0) version += "+${metadata}"
+    return version
+}
+
+version = semver(
+    project.mod_major_version, 
+    project.mod_minor_version, 
+    project.mod_patch_version, 
+    project_prerelease_info,
+    project_version_metadata
+)
 group = project.maven_group
+
+configurations.configureEach {
+    resolutionStrategy.failOnChangingVersions()
+}
 
 base {
 	archivesName = project.archives_base_name
 }
 
 repositories {
-    maven {
-        name = 'Kneelawk Maven'
-        url = 'https://kneelawk.com/maven/'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Kneelawk Maven'
+                url = 'https://maven.kneelawk.com/releases'
+            }
+        }
+        filter {
+            includeGroupAndSubgroups 'com.kneelawk'
+        }
     }
-    maven {
-        name = 'Nucleoid'
-        url = 'https://maven.nucleoid.xyz'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Nucleoid'
+                url = 'https://maven.nucleoid.xyz'
+            }
+        }
+        filter {
+            includeGroupAndSubgroups 'xyz.nucleoid'
+            includeGroupAndSubgroups 'eu.pb4'
+        }
     }
     exclusiveContent {
         forRepository {
@@ -41,7 +80,6 @@ loom {
             sourceSet sourceSets.client
 		}
 	}
-
 }
 
 fabricApi {
@@ -52,9 +90,9 @@ fabricApi {
 
 dependencies {
 	// To change the versions see the gradle.properties file
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	minecraft "com.mojang:minecraft:${minecraft_version}"
+	mappings "net.fabricmc:yarn:${yarn_mappings_version}:v2"
+	modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
@@ -86,9 +124,14 @@ dependencies {
 
 processResources {
 	inputs.property "version", project.version
+    inputs.property "minecraft_version", minecraft_version
+    inputs.property "fabric_loader_version", fabric_loader_version
+    inputs.property "polyfactory_version", project.polyfactory_version
+    inputs.property "polymer_version", project.polymer_version
+    inputs.property "polydex_version", project.polydex_version
 
 	filesMatching("fabric.mod.json") {
-		expand "version": inputs.properties.version
+        expand "version": project.version, "minecraft_version": minecraft_version, "fabric_loader_version": fabric_loader_version, "polyfactory_version": project.polyfactory_version, "polymer_version": project.polymer_version, "polydex_version": project.polydex_version
 	}
 }
 
@@ -114,20 +157,33 @@ jar {
 	}
 }
 
-// configure the maven publication
-publishing {
-	publications {
-		create("mavenJava", MavenPublication) {
-			artifactId = project.archives_base_name
-			from components.java
-		}
-	}
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
 
-	// See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
-	repositories {
-		// Add repositories to publish to here.
-		// Notice: This block does NOT have the same function as the block in the top level.
-		// The repositories here will be used for publishing your artifact, not for
-		// retrieving dependencies.
-	}
+// configure the maven publication
+if (maven_repo != null) {
+    publishing {
+        publications {
+            create("mavenJava", MavenPublication) {
+                from components.java
+                groupId = project.maven_group
+                artifactId = project.archives_base_name
+                version = project.version
+            }
+        }
+
+        // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+        repositories {
+            maven {
+                name = 'GitHubPackages'
+                url = uri(maven_repo)
+                credentials {
+                    username = System.env.USERNAME
+                    password = System.env.TOKEN
+                }
+            }
+        }
+    }
 }

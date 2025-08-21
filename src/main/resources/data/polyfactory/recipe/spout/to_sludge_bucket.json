@@ -1,0 +1,1 @@
+{"type":"polyfactory:spout/simple","fluid_input":[{"type":"paraburdoo:sludge","amount":81000}],"item":{"base":"minecraft:bucket"},"result":{"id":"paraburdoo:sludge_bucket"},"sound":"minecraft:item.bucket.fill","time":4.5}

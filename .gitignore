@@ -41,3 +41,6 @@ replay_*.log
 *.jfr
 
 checkouts/
+.factorypath
+.envrc
+.direnv/

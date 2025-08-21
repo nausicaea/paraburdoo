@@ -1,0 +1,106 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+# This workflow will build a package using Gradle and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
+
+name: Gradle Package
+
+on:
+  schedule:
+    - cron: '38 5 * * *'
+  push:
+    branches: [ "main", "release/*" ]
+    # Publish semver tags as releases.
+    tags: [ 'v*.*.*' ]
+  pull_request:
+    branches: [ "main", "release/*" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    environment: Minecraft 1.21.4
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        lfs: true
+
+    - name: Create prerelease for development
+      if: github.ref_type != 'tag'
+      run: echo "PROJECT_PRERELEASE_INFO=dev" >> $GITHUB_ENV
+
+    - name: Create version metadata for development
+      if: github.ref_type != 'tag'
+      run: |
+        set -xe
+        fingerprint="$(echo ${{github.sha}} | head -c7)"
+        minecraft_version="$(echo $MINECRAFT_VERSION | sed -e 's/\./-/g')"
+        echo "PROJECT_VERSION_METADATA=${fingerprint}.${minecraft_version}" >> $GITHUB_ENV
+      env:
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+
+    - name: Create version metadata for tagged releases
+      if: github.ref_type == 'tag'
+      run: |
+        set -xe
+        minecraft_version="$(echo $MINECRAFT_VERSION | sed -e 's/\./-/g')"
+        echo "PROJECT_VERSION_METADATA=${minecraft_version}" >> $GITHUB_ENV
+      env:
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@af1da67850ed9a4cedd57bfd976089dd991e2582 # v4.0.0
+
+    - name: Build with Gradle
+      run: ./gradlew build
+      env:
+        MAVEN_REPO: "https://maven.pkg.github.com/${{ github.repository }}"
+        PROJECT_PRERELEASE_INFO: ${{ env.PROJECT_PRERELEASE_INFO }}
+        PROJECT_VERSION_METADATA: ${{ env.PROJECT_VERSION_METADATA }}
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+        YARN_MAPPINGS_VERSION: ${{ vars.YARN_MAPPINGS_VERSION }}
+        FABRIC_LOADER_VERSION: ${{ vars.FABRIC_LOADER_VERSION }}
+
+    - name: Capture dependency verification artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: DependencyVerification
+        path: build/reports/dependency-verification/
+        retention-days: 1
+
+    - name: Capture build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: Artifacts
+        path: build/libs/
+
+    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
+    # the publishing section of your build.gradle
+    - name: Publish to GitHub Packages
+      if: github.ref_type == 'tag'
+      run: ./gradlew publish
+      env:
+        USERNAME: ${{ github.actor }}
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MAVEN_REPO: "https://maven.pkg.github.com/${{ github.repository }}"
+        PROJECT_PRERELEASE_INFO: ${{ env.PROJECT_PRERELEASE_INFO }}
+        PROJECT_VERSION_METADATA: ${{ env.PROJECT_VERSION_METADATA }}
+        MINECRAFT_VERSION: ${{ vars.MINECRAFT_VERSION }}
+        YARN_MAPPINGS_VERSION: ${{ vars.YARN_MAPPINGS_VERSION }}
+        FABRIC_LOADER_VERSION: ${{ vars.FABRIC_LOADER_VERSION }}
