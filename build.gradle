@@ -39,16 +39,24 @@ repositories {
         forRepository {
             maven {
                 name = 'Kneelawk Maven'
-                url = 'https://maven.kneelawk.com'
+                url = 'https://maven.kneelawk.com/releases'
             }
         }
         filter {
-            includeGroup 'com.kneelawk'
+            includeGroupAndSubgroups 'com.kneelawk'
         }
     }
-    maven {
-        name = 'Nucleoid'
-        url = 'https://maven.nucleoid.xyz'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Nucleoid'
+                url = 'https://maven.nucleoid.xyz'
+            }
+        }
+        filter {
+            includeGroupAndSubgroups 'xyz.nucleoid'
+            includeGroupAndSubgroups 'eu.pb4'
+        }
     }
     exclusiveContent {
         forRepository {
