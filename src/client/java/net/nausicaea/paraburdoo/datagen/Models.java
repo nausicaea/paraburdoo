@@ -21,10 +21,16 @@ public class Models extends FabricModelProvider {
 
         Paraburdoo.LOGGER.debug("add block state model for {}", ModBlocks.SLUDGE);
         generator.registerBuiltinWithParticle(ModBlocks.SLUDGE, SimpleFluidRenderHandler.WATER_STILL);
+
+        Paraburdoo.LOGGER.debug("add block state model for {}", ModBlocks.SLUDGE_CAULDRON);
+        generator.registerSimpleCubeAll(ModBlocks.SLUDGE_CAULDRON);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator generator) {
+        Paraburdoo.LOGGER.debug("add item model for {}", ModItems.PURIFIED_GRAVEL);
+        generator.register(ModItems.PURIFIED_GRAVEL, net.minecraft.client.data.Models.GENERATED);
+
         Paraburdoo.LOGGER.debug("add item model for {}", ModItems.SLUDGE_BUCKET);
         generator.register(ModItems.SLUDGE_BUCKET, net.minecraft.client.data.Models.GENERATED);
     }

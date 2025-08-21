@@ -11,7 +11,6 @@ public class ParaburdooDatagen implements DataGeneratorEntrypoint {
         pack.addProvider(Models::new);
         pack.addProvider(EnUsLanguage::new);
         pack.addProvider(BlockLootTables::new);
-        pack.addProvider(FluidTags::new);
     }
 
 }
