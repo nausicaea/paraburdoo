@@ -35,9 +35,16 @@ base {
 }
 
 repositories {
-    maven {
-        name = 'Kneelawk Maven'
-        url = 'https://kneelawk.com/maven/'
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = 'Kneelawk Maven'
+                url = 'https://maven.kneelawk.com'
+            }
+        }
+        filter {
+            includeGroup 'com.kneelawk'
+        }
     }
     maven {
         name = 'Nucleoid'
