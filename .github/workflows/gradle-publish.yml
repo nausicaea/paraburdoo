@@ -82,7 +82,7 @@ jobs:
       with:
         name: DependencyVerification
         path: build/reports/dependency-verification/
-        retention_days: 1
+        retention-days: 1
 
     - name: Capture build artifacts
       uses: actions/upload-artifact@v4
