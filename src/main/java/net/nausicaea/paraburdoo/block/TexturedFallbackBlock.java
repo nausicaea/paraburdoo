@@ -43,7 +43,6 @@ public abstract class TexturedFallbackBlock extends Block implements PolymerBloc
             super(settings);
 
             var modelId = ((SettingsAccessor) settings).getRegistryKey().getValue().withPrefixedPath("block/");
-            Paraburdoo.LOGGER.warn("requesting block model for {}", modelId);
             var model = PolymerBlockModel.of(modelId);
             this.blockState = PolymerBlockResourceUtils.requestBlock(BlockModelType.FULL_BLOCK, model);
         }

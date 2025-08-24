@@ -28,9 +28,7 @@
 		"minecraft": "~${minecraft_version}",
 		"java": ">=21",
 		"fabric-api": "*",
-        "polyfactory": ">=${polyfactory_version}",
-        "polymer-bundled": ">=${polymer_version}"
-
+        "polyfactory": ">=${polyfactory_version}"
 	},
     "suggests": {
         "polydex": ">=${polydex_version}"
