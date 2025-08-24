@@ -1,6 +1,6 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "paraburdoo:item/purified_gravel"
+    "model": "paraburdoo:block/purified_gravel",
+    "type": "minecraft:model"
   }
 }
