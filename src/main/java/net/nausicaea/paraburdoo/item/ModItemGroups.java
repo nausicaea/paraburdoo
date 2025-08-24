@@ -24,7 +24,6 @@ public abstract class ModItemGroups {
                 .icon(() -> new ItemStack(Items.RAW_IRON))
                 .entries((context, entries) -> {
                     entries.add(ModBlocks.PURIFIED_GRAVEL.asItem());
-                    entries.add(ModItems.SLUDGE_BUCKET);
                 })
                 .build()
         );

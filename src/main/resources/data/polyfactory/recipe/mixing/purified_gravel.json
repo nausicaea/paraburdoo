@@ -18,11 +18,6 @@
     "count": 1,
     "id": "paraburdoo:purified_gravel"
   },
-  "output_fluid": [
-    {
-        "type": "paraburdoo:sludge",
-        "amount": 27000
-    }
-  ],
+  "output_fluid": [],
   "time": 4.0
 }

@@ -20,24 +20,6 @@ public abstract class ModBlocks {
             s -> TexturedFallbackBlock.create(s, Blocks.GRAVEL),
             AbstractBlock.Settings.copy(Blocks.GRAVEL)
     );
-    public static final TexturedFallbackBlock SLUDGE = register(
-            "sludge",
-            settings -> TexturedFallbackBlock.create(settings, Blocks.WATER),
-            AbstractBlock.Settings.create()
-                    .mapColor(MapColor.BROWN)
-                    .replaceable()
-                    .noCollision()
-                    .strength(100.0F)
-                    .pistonBehavior(PistonBehavior.DESTROY)
-                    .dropsNothing()
-                    .liquid()
-                    .sounds(BlockSoundGroup.INTENTIONALLY_EMPTY)
-    );
-    public static final TexturedFallbackBlock SLUDGE_CAULDRON = register(
-            "sludge_cauldron",
-            s -> TexturedFallbackBlock.create(s, Blocks.WATER_CAULDRON),
-            AbstractBlock.Settings.copy(Blocks.WATER_CAULDRON)
-    );
 
     private static <T extends Block> T register(String name, Function<AbstractBlock.Settings, T> blockFactory, AbstractBlock.Settings settings) {
         // Create a registry key for the block

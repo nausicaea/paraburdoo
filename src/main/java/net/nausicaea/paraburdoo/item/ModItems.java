@@ -17,11 +17,6 @@ import java.util.function.Function;
 
 public abstract class ModItems {
     public static final Item PURIFIED_GRAVEL = register(ModBlocks.PURIFIED_GRAVEL);
-    public static final Item SLUDGE_BUCKET = register(
-        "sludge_bucket",
-            SludgeBucket::new,
-        new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)
-    );
 
     private static <E extends Block & PolymerBlock> FactoryBlockItem register(E block) {
         var id = Registries.BLOCK.getId(block);

@@ -4,7 +4,6 @@ import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 
 import net.nausicaea.paraburdoo.block.ModBlocks;
-import net.nausicaea.paraburdoo.fluid.ModFluidTypes;
 import net.nausicaea.paraburdoo.item.ModItemGroups;
 import net.nausicaea.paraburdoo.item.ModItems;
 import org.slf4j.Logger;
@@ -20,7 +19,6 @@ public class Paraburdoo implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-        ModFluidTypes.registerAll();
         ModBlocks.registerAll();
         ModItems.registerAll();
         ModItemGroups.registerAll();
