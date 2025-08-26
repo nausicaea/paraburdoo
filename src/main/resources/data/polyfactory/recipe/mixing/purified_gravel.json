@@ -3,8 +3,8 @@
   "fluid_input": [
     {
       "type": "minecraft:water",
-      "required": 27000,
-      "used": 27000
+      "required": 54000,
+      "used": 54000
     }
   ],
   "input": {
