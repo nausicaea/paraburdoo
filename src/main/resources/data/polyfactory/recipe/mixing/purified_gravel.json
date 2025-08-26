@@ -10,7 +10,7 @@
   "input": {
     "base": "minecraft:gravel"
   },
-  "max_temperature": 2.0,
+  "max_temperature": 0.0,
   "minimal_temperature": 0.0,
   "minimum_speed": 20.0,
   "optimal_speed": 25.0,
