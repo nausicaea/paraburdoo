@@ -8,8 +8,6 @@
 name: Gradle Package
 
 on:
-  schedule:
-    - cron: '38 5 * * *'
   push:
     branches: [ "main", "release/*" ]
     # Publish semver tags as releases.
